@@ -1,10 +1,7 @@
 package org.testresi.testresiangular;
 
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -13,6 +10,7 @@ import java.sql.SQLException;
 
 @RestController
 @RequestMapping("/add/")
+@CrossOrigin("http://10.0.16.100:4200")
 public class AnaController {
 
     /**

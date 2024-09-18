@@ -1,11 +1,8 @@
 package org.testresi.testresiangular;
 
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.ModelAndView;
+
+import org.springframework.web.bind.annotation.*;
 import org.testresi.testresiangular.DBobjects.AnaArticolo;
 
 
@@ -15,7 +12,19 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/articolo")
+@CrossOrigin("http://10.0.16.100:4200")
 public class ArticoloController {
+//    @Bean
+//    public WebMvcConfigurer corsConfigurer() {
+//        return new WebMvcConfigurer() {
+//            @Override
+//            public void addCorsMappings(CorsRegistry registry) {
+//                registry.addMapping("/api/**")
+//                        .allowedOrigins("http://localhost:4200")
+//                        .allowedOrigins("https://10.0.16.182:4200");
+//            }
+//        };
+//    }
 
 
 
@@ -101,8 +110,8 @@ public class ArticoloController {
     @GetMapping("getArticolo/")
     public AnaArticolo getArticolo(@RequestParam String codArticolo,
                                     @RequestParam String codMagazzino) throws SQLException {
-        ModelAndView model = new ModelAndView("articoli");
-        model.addObject("titolo", "Prodotto");
+//        ModelAndView model = new ModelAndView("articoli");
+//        model.addObject("titolo", "Prodotto");
 
         //List<AnaArticolo> liataArticoli = new ArrayList<AnaArticolo>();
 
